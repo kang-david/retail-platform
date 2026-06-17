@@ -64,12 +64,12 @@ public class GlobalExceptionHandler {
         ErrorResponse error =
                 new ErrorResponse(
                         LocalDateTime.now(),
-                        HttpStatus.BAD_REQUEST.value(),
+                        HttpStatus.CONFLICT.value(),
                         "Insufficient Inventory",
                         ex.getMessage());
 
         return ResponseEntity
-                .status(HttpStatus.BAD_REQUEST)
+                .status(HttpStatus.CONFLICT)
                 .body(error);
     }
 

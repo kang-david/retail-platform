@@ -25,7 +25,6 @@ services:
     build: .
 
     depends_on:
-#      - postgres
       postgres:
         condition: service_healthy
 

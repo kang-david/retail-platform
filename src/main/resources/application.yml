@@ -2,20 +2,12 @@ spring:
   application:
     name: retail-platform
 
-  # The .env file is only used for docker-compose orchestration.
-  # If not running docker-compose in development:
-  #
-  # Option 1: Set env variables through console (recommended, must be done every session but very simple)
-  # Option 2: Set env variables as user/system variables (can conflict with future projects if forgotten about)
-  # Option 3: Hardcode (must change back before pushing or risk exposing credentials)
-  # Option 4: Set up .env to work locally (not recommended; requires adding extra code that can get messy)
-  #
-  # Key takeaway: Just get Docker
   datasource:
     url: ${DB_URL}
     username: ${DB_USER}
     password: ${DB_PASSWORD}
 
   jpa:
-    # Don't show hibernate.ddl-auto=update here.
+#    hibernate:
+#      ddl-auto: update
     show-sql: true
